@@ -78,7 +78,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 		cell.dayOfMonth.text = calendarDay.day
 		if(calendarDay.month == CalendarDay.Month.current)
 		{
-			cell.dayOfMonth.textColor = UIColor.black
+			cell.dayOfMonth.textColor = UIColor.init(named: "TextColor")
 		}
 		else
 		{

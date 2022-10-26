@@ -23,7 +23,7 @@ class WeeklyViewController: UIViewController, UICollectionViewDelegate, UICollec
 	
 	func setCellsView()
 	{
-		let width = (collectionView.frame.size.width - 2) / 8
+		let width = (collectionView.frame.size.width - 2) / 7
 		let height = (collectionView.frame.size.height - 2)
 		
 		let flowLayout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
@@ -65,7 +65,7 @@ class WeeklyViewController: UIViewController, UICollectionViewDelegate, UICollec
 		}
 		else
 		{
-			cell.backgroundColor = UIColor.white
+            cell.backgroundColor = UIColor.init(named: "GlobalColor")
 		}
 		
 		return cell
@@ -107,7 +107,7 @@ class WeeklyViewController: UIViewController, UICollectionViewDelegate, UICollec
 	{
 		let cell = tableView.dequeueReusableCell(withIdentifier: "cellID") as! EventCell
 		let event = Event().eventsForDate(date: selectedDate)[indexPath.row]
-		cell.eventLabel.text = event.name + " " + CalendarHelper().timeString(date: event.date)
+		cell.eventLabel.text = event.name + " hours"
 		return cell
 	}
 	

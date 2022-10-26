@@ -31,7 +31,7 @@
 		2E450DE726DE438200EA6132 /* DailyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyCell.swift; sourceTree = "<group>"; };
 		2E450DEA26DE438E00EA6132 /* DailyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyViewController.swift; sourceTree = "<group>"; };
 		2E450DED26DE4C9000EA6132 /* CalendarDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarDay.swift; sourceTree = "<group>"; };
-		2E49EBA725B02883004453F8 /* ServiceCalendarApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ServiceCalendarApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E49EBA725B02883004453F8 /* Service Cal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Service Cal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E49EBAA25B02883004453F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2E49EBAC25B02883004453F8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		2E49EBAE25B02883004453F8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -66,7 +66,7 @@
 		2E49EBA825B02883004453F8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2E49EBA725B02883004453F8 /* ServiceCalendarApp.app */,
+				2E49EBA725B02883004453F8 /* Service Cal.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -111,7 +111,7 @@
 			);
 			name = ServiceCalendarApp;
 			productName = CalendarExampleTutorial;
-			productReference = 2E49EBA725B02883004453F8 /* ServiceCalendarApp.app */;
+			productReference = 2E49EBA725B02883004453F8 /* Service Cal.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -323,16 +323,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = B3SEC78SH4;
+				DEVELOPMENT_TEAM = 84773B36BM;
 				INFOPLIST_FILE = ServiceCalendarApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = bronson.CalendarServiceApp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Service Cal";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -342,16 +342,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = B3SEC78SH4;
+				DEVELOPMENT_TEAM = 84773B36BM;
 				INFOPLIST_FILE = ServiceCalendarApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = bronson.CalendarServiceApp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Service Cal";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
