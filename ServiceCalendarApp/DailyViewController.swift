@@ -82,25 +82,25 @@ class DailyViewController: UIViewController, UITableViewDelegate, UITableViewDat
 	func setMoreEvents(_ cell: DailyCell, _ count: Int)
 	{
 		cell.event3.isHidden = false
-		cell.event3.text = String(count) + " More Events"
+		cell.event3.text = String(count) + " More Entries"
 	}
 	
 	func setEvent1(_ cell: DailyCell, _ event: Event)
 	{
 		cell.event1.isHidden = false
-		cell.event1.text = event.name
+		cell.event1.text = event.name + " hours"
 	}
 	
 	func setEvent2(_ cell: DailyCell, _ event: Event)
 	{
 		cell.event2.isHidden = false
-		cell.event2.text = event.name
+		cell.event2.text = event.name + " hours"
 	}
 	
 	func setEvent3(_ cell: DailyCell, _ event: Event)
 	{
 		cell.event3.isHidden = false
-		cell.event3.text = event.name
+		cell.event3.text = event.name + " hours"
 	}
 	
 	func hideAll(_ cell: DailyCell)

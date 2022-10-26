@@ -4,8 +4,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -29,7 +29,7 @@
         <!--Monthly Calendar-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ServiceCalendarApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Service_Cal" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -42,7 +42,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lxz-mE-fK1">
                                 <rect key="frame" x="262" y="116" width="152" height="31.5"/>
-                                <color key="tintColor" red="0.2588235438" green="0.37647059560000001" blue="0.56862747670000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" name="JWDarkBlue2"/>
                                 <state key="normal" image="arrowshape.turn.up.right.circle.fill" catalog="system"/>
                                 <connections>
                                     <action selector="nextMonth:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PFr-a8-wWp"/>
@@ -50,7 +50,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G3T-iL-5do">
                                 <rect key="frame" x="0.0" y="116" width="152" height="31.5"/>
-                                <color key="tintColor" red="0.2588235438" green="0.37647059560000001" blue="0.56862747670000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" name="JWDarkBlue2"/>
                                 <state key="normal" image="arrowshape.turn.up.left.circle.fill" catalog="system"/>
                                 <connections>
                                     <action selector="previousMonth:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DdQ-5b-YXJ"/>
@@ -108,7 +108,7 @@
                             </stackView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Xxl-GX-PPb">
                                 <rect key="frame" x="0.0" y="227.5" width="414" height="634.5"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" name="GlobalColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="2" minimumInteritemSpacing="2" id="iBe-yb-cbf">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -116,7 +116,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="calCell" id="qcL-I4-C2x" customClass="CalendarCell" customModule="ServiceCalendarApp" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="calCell" id="qcL-I4-C2x" customClass="CalendarCell" customModule="Service_Cal" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="0Br-Dc-yEo">
@@ -125,11 +125,13 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LND-sf-Yrb">
                                                     <rect key="frame" x="59" y="20" width="10" height="24"/>
+                                                    <color key="tintColor" name="TextColor"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" name="TextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <color key="backgroundColor" name="GlobalColor"/>
                                             <constraints>
                                                 <constraint firstItem="LND-sf-Yrb" firstAttribute="centerY" secondItem="0Br-Dc-yEo" secondAttribute="centerY" multiplier="0.5" id="Rnt-H8-xTY"/>
                                                 <constraint firstItem="LND-sf-Yrb" firstAttribute="centerX" secondItem="0Br-Dc-yEo" secondAttribute="centerX" id="yPB-5K-0wx"/>
@@ -147,7 +149,7 @@
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="GlobalColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="leading" secondItem="G3T-iL-5do" secondAttribute="leading" id="2ZW-ZZ-PL4"/>
                             <constraint firstItem="G3T-iL-5do" firstAttribute="height" secondItem="nST-AR-Lhg" secondAttribute="height" id="2kQ-jH-0MC"/>
@@ -174,12 +176,15 @@
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="kqC-GW-BCQ">
                                 <rect key="frame" x="302" y="7" width="92" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Weekly"/>
+                                <color key="tintColor" name="JWDarkBlue2"/>
+                                <state key="normal" title="Weekly">
+                                    <color key="titleColor" name="JWDarkBlue2"/>
+                                </state>
                                 <connections>
                                     <segue destination="ATe-xI-llM" kind="show" id="TwW-xN-WVS"/>
                                 </connections>
                             </button>
-                            <color key="tintColor" red="0.2588235438" green="0.37647059560000001" blue="0.56862747670000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <color key="tintColor" name="JWDarkBlue2"/>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -194,7 +199,7 @@
         <!--Daily Calendar-->
         <scene sceneID="yzo-uD-Y6u">
             <objects>
-                <viewController id="20G-HC-81P" customClass="DailyViewController" customModule="ServiceCalendarApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="20G-HC-81P" customClass="DailyViewController" customModule="Service_Cal" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dCB-vK-qf0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -207,8 +212,10 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fOW-jw-Fbm">
                                 <rect key="frame" x="262" y="112" width="152" height="31.5"/>
-                                <color key="tintColor" red="0.2588235438" green="0.37647059560000001" blue="0.56862747670000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" image="arrowshape.turn.up.right.circle.fill" catalog="system"/>
+                                <color key="tintColor" name="JWDarkBlue2"/>
+                                <state key="normal" image="arrowshape.turn.up.right.circle.fill" catalog="system">
+                                    <color key="titleColor" name="JWDarkBlue2"/>
+                                </state>
                                 <connections>
                                     <action selector="nextDayAction:" destination="20G-HC-81P" eventType="touchUpInside" id="5aD-Jw-E2T"/>
                                     <action selector="nextWeek:" destination="ATe-xI-llM" eventType="touchUpInside" id="1hS-rF-7Ys"/>
@@ -216,8 +223,10 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qsn-Zf-Xu2">
                                 <rect key="frame" x="0.0" y="112" width="152" height="31.5"/>
-                                <color key="tintColor" red="0.2588235438" green="0.37647059560000001" blue="0.56862747670000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" image="arrowshape.turn.up.left.circle.fill" catalog="system"/>
+                                <color key="tintColor" name="JWDarkBlue2"/>
+                                <state key="normal" image="arrowshape.turn.up.left.circle.fill" catalog="system">
+                                    <color key="titleColor" name="JWDarkBlue2"/>
+                                </state>
                                 <connections>
                                     <action selector="previousDayAction:" destination="20G-HC-81P" eventType="touchUpInside" id="jxU-GU-L2h"/>
                                     <action selector="previousWeek:" destination="ATe-xI-llM" eventType="touchUpInside" id="tO6-sk-NWp"/>
@@ -231,9 +240,9 @@
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RDt-Ev-Tuw">
                                 <rect key="frame" x="0.0" y="207.5" width="414" height="654.5"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" name="GlobalColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellDailyID" rowHeight="70" id="app-4E-qUg" customClass="DailyCell" customModule="ServiceCalendarApp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellDailyID" rowHeight="70" id="app-4E-qUg" customClass="DailyCell" customModule="Service_Cal" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="414" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="app-4E-qUg" id="0Th-xq-r6q">
@@ -246,35 +255,35 @@
                                                         <constraint firstAttribute="width" constant="80" id="hbc-tx-RDf"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
+                                                    <color key="textColor" name="TextColor"/>
+                                                    <color key="highlightedColor" name="GlobalColor"/>
                                                 </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EWl-Fu-bCB">
                                                     <rect key="frame" x="100" y="0.0" width="314" height="70"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event 1" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z4f-CJ-8uC">
                                                             <rect key="frame" x="10" y="7" width="91" height="56"/>
-                                                            <color key="backgroundColor" systemColor="systemTealColor"/>
+                                                            <color key="backgroundColor" name="JWLightBlue5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <color key="textColor" name="TextColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event 1" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nkb-KK-Nbf">
                                                             <rect key="frame" x="109" y="7" width="91" height="56"/>
-                                                            <color key="backgroundColor" systemColor="systemTealColor"/>
+                                                            <color key="backgroundColor" name="JWLightBlue5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <color key="textColor" name="TextColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event 1" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2fa-i0-8qs">
                                                             <rect key="frame" x="208" y="7" width="91" height="56"/>
-                                                            <color key="backgroundColor" systemColor="systemTealColor"/>
+                                                            <color key="backgroundColor" name="JWLightBlue5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <color key="textColor" name="TextColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
-                                                    <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                                    <color key="backgroundColor" name="GlobalColor"/>
                                                     <constraints>
                                                         <constraint firstItem="Z4f-CJ-8uC" firstAttribute="leading" secondItem="EWl-Fu-bCB" secondAttribute="leading" constant="10" id="2Hy-Di-euF"/>
                                                         <constraint firstItem="nkb-KK-Nbf" firstAttribute="leading" secondItem="Z4f-CJ-8uC" secondAttribute="trailing" constant="8" symbolic="YES" id="Faq-bL-vqW"/>
@@ -291,6 +300,7 @@
                                                     </constraints>
                                                 </view>
                                             </subviews>
+                                            <color key="backgroundColor" name="GlobalColor"/>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="EWl-Fu-bCB" secondAttribute="trailing" id="3g7-Xn-mc2"/>
                                                 <constraint firstAttribute="bottom" secondItem="EWl-Fu-bCB" secondAttribute="bottom" id="AAz-Yg-Byz"/>
@@ -315,7 +325,7 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="2kJ-BF-y1f"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="GlobalColor"/>
                         <constraints>
                             <constraint firstItem="qsn-Zf-Xu2" firstAttribute="leading" secondItem="2kJ-BF-y1f" secondAttribute="leading" id="4aM-yD-Ipc"/>
                             <constraint firstItem="2kJ-BF-y1f" firstAttribute="bottom" secondItem="RDt-Ev-Tuw" secondAttribute="bottom" id="BBf-y4-N1j"/>
@@ -337,7 +347,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Daily Calendar" id="EDa-bF-Mn3">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="niC-uN-OmF">
-                            <color key="tintColor" red="0.2588235438" green="0.37647059560000001" blue="0.56862747670000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <color key="tintColor" name="JWDarkBlue2"/>
                             <connections>
                                 <segue destination="1w4-iF-aWX" kind="show" id="Ld5-W9-au2"/>
                             </connections>
@@ -356,7 +366,7 @@
         <!--Weekly Calendar-->
         <scene sceneID="XRu-cO-ueV">
             <objects>
-                <viewController id="ATe-xI-llM" customClass="WeeklyViewController" customModule="ServiceCalendarApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ATe-xI-llM" customClass="WeeklyViewController" customModule="Service_Cal" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1j2-8z-ihA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -369,7 +379,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="chB-Bp-2kc">
                                 <rect key="frame" x="262" y="116" width="152" height="31.5"/>
-                                <color key="tintColor" red="0.2588235438" green="0.37647059560000001" blue="0.56862747670000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" name="JWDarkBlue2"/>
                                 <state key="normal" image="arrowshape.turn.up.right.circle.fill" catalog="system"/>
                                 <connections>
                                     <action selector="nextWeek:" destination="ATe-xI-llM" eventType="touchUpInside" id="FJJ-uh-lgz"/>
@@ -377,7 +387,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aQb-X7-F9q">
                                 <rect key="frame" x="0.0" y="116" width="152" height="31.5"/>
-                                <color key="tintColor" red="0.2588235438" green="0.37647059560000001" blue="0.56862747670000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" name="JWDarkBlue2"/>
                                 <state key="normal" image="arrowshape.turn.up.left.circle.fill" catalog="system"/>
                                 <connections>
                                     <action selector="previousWeek:" destination="ATe-xI-llM" eventType="touchUpInside" id="RIE-LU-TtC"/>
@@ -435,7 +445,7 @@
                             </stackView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="F10-Jf-RuJ">
                                 <rect key="frame" x="0.0" y="227.5" width="414" height="90.5"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" name="GlobalColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="2" minimumInteritemSpacing="2" id="3jN-pE-20W">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -443,7 +453,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="calCell" id="tHJ-4f-pFV" customClass="CalendarCell" customModule="ServiceCalendarApp" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="calCell" id="tHJ-4f-pFV" customClass="CalendarCell" customModule="Service_Cal" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ebY-5K-roO">
@@ -453,7 +463,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tT9-TR-bF1">
                                                     <rect key="frame" x="59" y="20" width="10" height="24"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" name="TextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -474,9 +484,9 @@
                             </collectionView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eYY-YW-y4j">
                                 <rect key="frame" x="0.0" y="318" width="414" height="544"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" name="GlobalColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellID" rowHeight="67" id="qDn-A4-hW8" customClass="EventCell" customModule="ServiceCalendarApp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellID" rowHeight="67" id="qDn-A4-hW8" customClass="EventCell" customModule="Service_Cal" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="414" height="67"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qDn-A4-hW8" id="dZO-pZ-yBC">
@@ -490,6 +500,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <color key="backgroundColor" name="GlobalColor"/>
                                             <constraints>
                                                 <constraint firstItem="Hov-NG-ISp" firstAttribute="centerY" secondItem="dZO-pZ-yBC" secondAttribute="centerY" id="HzH-ZA-son"/>
                                                 <constraint firstItem="Hov-NG-ISp" firstAttribute="leading" secondItem="dZO-pZ-yBC" secondAttribute="leading" constant="31" id="v3p-j5-CRE"/>
@@ -507,7 +518,7 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qzC-z7-Odp"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="GlobalColor"/>
                         <constraints>
                             <constraint firstItem="aQb-X7-F9q" firstAttribute="height" secondItem="sui-M1-mjz" secondAttribute="height" id="63r-ar-Sjm"/>
                             <constraint firstItem="chB-Bp-2kc" firstAttribute="centerY" secondItem="sui-M1-mjz" secondAttribute="centerY" id="BjJ-Iz-Td7"/>
@@ -536,7 +547,7 @@
                     <navigationItem key="navigationItem" title="Weekly Calendar" id="TL4-y0-sT6">
                         <rightBarButtonItems>
                             <barButtonItem style="plain" systemItem="add" id="x4F-Sp-ul6">
-                                <color key="tintColor" red="0.2588235438" green="0.37647059560000001" blue="0.56862747670000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" name="JWDarkBlue2"/>
                                 <connections>
                                     <segue destination="1w4-iF-aWX" kind="show" id="6vH-R7-7ir"/>
                                 </connections>
@@ -545,12 +556,15 @@
                                 <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="XfT-st-8Sb">
                                     <rect key="frame" x="260.5" y="7" width="92" height="30"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <state key="normal" title="Daily"/>
+                                    <color key="tintColor" name="JWDarkBlue2"/>
+                                    <state key="normal" title="Daily">
+                                        <color key="titleColor" name="JWDarkBlue2"/>
+                                    </state>
                                     <connections>
                                         <segue destination="20G-HC-81P" kind="show" id="yez-Yh-g6r"/>
                                     </connections>
                                 </button>
-                                <color key="tintColor" red="0.2588235438" green="0.37647059560000001" blue="0.56862747670000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" name="JWDarkBlue2"/>
                             </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
@@ -564,20 +578,21 @@
             </objects>
             <point key="canvasLocation" x="857.97101449275374" y="93.75"/>
         </scene>
-        <!--Event Edit-->
+        <!--Create Entry-->
         <scene sceneID="0bA-5X-rEZ">
             <objects>
-                <viewController id="1w4-iF-aWX" customClass="EventEditViewController" customModule="ServiceCalendarApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="1w4-iF-aWX" customClass="EventEditViewController" customModule="Service_Cal" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jBL-99-GTD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o2C-4r-suh">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Hours" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o2C-4r-suh">
                                 <rect key="frame" x="20.5" y="129" width="373" height="34"/>
+                                <color key="backgroundColor" name="GlobalColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="gaL-m4-jSx">
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="gaL-m4-jSx">
                                 <rect key="frame" x="20.5" y="193" width="373" height="162"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="162" id="SST-r8-up2"/>
@@ -585,7 +600,7 @@
                             </datePicker>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bRX-lN-Hxe"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="GlobalColor"/>
                         <constraints>
                             <constraint firstItem="o2C-4r-suh" firstAttribute="width" secondItem="jBL-99-GTD" secondAttribute="width" multiplier="0.9" id="AaL-Np-DL1"/>
                             <constraint firstItem="gaL-m4-jSx" firstAttribute="top" secondItem="o2C-4r-suh" secondAttribute="bottom" constant="30" id="UCi-71-2mg"/>
@@ -595,17 +610,20 @@
                             <constraint firstItem="gaL-m4-jSx" firstAttribute="centerX" secondItem="o2C-4r-suh" secondAttribute="centerX" id="lii-EU-HqR"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Event Edit" id="Mdo-PN-W0g">
+                    <navigationItem key="navigationItem" title="Create Entry" id="Mdo-PN-W0g">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="cQK-TI-nkk">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="iCv-eH-cqY">
                                 <rect key="frame" x="302" y="7" width="92" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Save"/>
+                                <color key="tintColor" name="JWDarkBlue2"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" name="JWDarkBlue2"/>
+                                </state>
                                 <connections>
                                     <action selector="saveAction:" destination="1w4-iF-aWX" eventType="touchUpInside" id="mTB-LR-7Ye"/>
                                 </connections>
                             </button>
-                            <color key="tintColor" red="0.2588235438" green="0.37647059560000001" blue="0.56862747670000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <color key="tintColor" name="JWDarkBlue2"/>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -621,17 +639,21 @@
     <inferredMetricsTieBreakers>
         <segue reference="Ld5-W9-au2"/>
     </inferredMetricsTieBreakers>
+    <color key="tintColor" name="JWDarkBlue2"/>
     <resources>
         <image name="arrowshape.turn.up.left.circle.fill" catalog="system" width="128" height="123"/>
         <image name="arrowshape.turn.up.right.circle.fill" catalog="system" width="128" height="123"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray6Color">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemTealColor">
-            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
+        <namedColor name="GlobalColor">
+            <color red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="JWDarkBlue2">
+            <color red="0.2196078431372549" green="0.38039215686274508" blue="0.58431372549019611" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="JWLightBlue5">
+            <color red="0.66274509803921566" green="0.75686274509803919" blue="0.87450980392156863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TextColor">
+            <color red="0.13333333333333333" green="0.12549019607843137" blue="0.12549019607843137" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>
